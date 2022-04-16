@@ -1,11 +1,16 @@
 <template>
-  <div class="grid">
-    <span>{{ $store.state.count }}</span>
-    <div class="container" v-for="count in $store.state.count" :key="count">
-      <UpVote />
-    </div>
-    <div>
-      <button @click="$store.dispatch('increment')">Add</button>
+  <div class="container scrwlr-container">
+    <div class="row justify-content-md-center scrwlr-row">
+      <div class="col-md-11 row row-cols-auto upvote-row">
+        <div v-for="count in $store.state.count" :key="count">
+        <UpVote />
+      </div>
+      </div>
+      <div class="col-md-1 btn-col">
+        <button class="btn btn-secondary btn-lg btn-increment" @click="$store.dispatch('increment')">
+          <span aria-hidden="true"><img class="arrow-img" src="./assets/add-filled.svg"/></span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -27,6 +32,35 @@ body {
   font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+.scrwlr-container {
+  border-radius: 10px !important;
+  border: 3px solid;
+  border-color: #D3D3D3;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+}
+
+.scrwlr-row {
+  padding: 35px !important;
+}
+
+.upvote-row {
+  border: 2px solid;
+  border-color: #D3D3D3;
+  border-radius: 10px;
+  height: 70px;
+  padding-top: 12px;
+}
+
+.btn-increment {
+  background-color: #F4F6F8 !important;
+  border-color: #F4F6F8 !important;
+  height: 68px !important;
+}
+
+.btn-col {
+  padding-left: 50px;
+}
+
 .grid {
   border: 10px solid #E5E8FD;
   display: grid;
@@ -37,15 +71,5 @@ body {
 
 .grid > * {
   padding: 10px;
-}
-
-.container {
-  border: 1px solid #E5E8FD;
-  display: grid;
-  width: 200px;
-  height: 200px;
-  position: center;
-  padding: 50px;
-  margin: 20px;
 }
 </style>
