@@ -1,5 +1,5 @@
 import { createStore  } from 'vuex'
-import createPersistedState from "vuex-persistedstate"
+import createPersistedState from 'vuex-persistedstate'
 
 const selected = {
   state: 'selected',

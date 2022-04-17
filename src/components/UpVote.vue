@@ -14,7 +14,7 @@ export default {
     function getSource(state) {
       let source = state === 'selected' ? 'arrow-up-active' : 'arrow-up-inactive'
 
-      return 'src/assets/'+source+'.svg'
+      return 'src/assets/' + source + '.svg'
     }
 
     return { getSource }
@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
 .upvote-container {
-  padding: 1px;
+  padding: 2px 1px 6px 1px;
 }
 
 img {
@@ -39,17 +39,5 @@ img {
 .bg-not-selected {
   background-color: #F4F6F8 !important;
   border-color: #F4F6F8 !important;
-}
-
-.bg-selected {
-  color: #253CF2;
-}
-
-.bg-not-selected {
-  color: 343A40
-}
-
-.grid > * {
-  padding: 10px;
 }
 </style>

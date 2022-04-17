@@ -27,11 +27,6 @@ export default {
 </script>
 
 <style scoped>
-body {
-  padding: 50px;
-  font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
 .scrwlr-container {
   border-radius: 10px !important;
   border: 3px solid;
@@ -49,6 +44,7 @@ body {
   border-radius: 10px;
   height: 70px;
   padding-top: 12px;
+  overflow-y: auto;
 }
 
 .btn-increment {
@@ -61,15 +57,19 @@ body {
   padding-left: 50px;
 }
 
-.grid {
-  border: 10px solid #E5E8FD;
-  display: grid;
-  width: 500px;
-  height: 500px;
-  position: center;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-.grid > * {
-  padding: 10px;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 </style>
