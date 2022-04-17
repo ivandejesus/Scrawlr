@@ -4,6 +4,9 @@
 
 ## Use This Template
 
+https://learnvue.co/2020/12/setting-up-your-first-vue3-project-vue-3-0-release/#vite
+https://vuex.vuejs.org/installation.html
+
 ## Usage
 ### install dep
 ```sh
