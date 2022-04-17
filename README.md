@@ -1,6 +1,6 @@
 # Scrawlr
 
-# Vite2.x + Vue 3.x + Bootstrap
+# Vite2.x + Vue 3.x + Vuex + Bootstrap
 
 ## Use This Template
 
